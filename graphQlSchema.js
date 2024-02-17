@@ -2,7 +2,7 @@ const { gql }  = require('apollo-server-express')
 const User = require('./model/UserModel')
 const mongoose = require('mongoose')
 
-exports.typeDefs = gql`
+module.exports.typeDefs = gql`
     type User{
         id: ID!
         name: String!
@@ -29,7 +29,7 @@ const connect = async () => {
     .catch((err) => console.log(err))
 }
 
-exports.resolvers = {
+module.exports.resolvers = {
     Query: {
         getUserList: async (parent, args) => {
             await connect();
