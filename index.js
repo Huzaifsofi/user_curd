@@ -1,6 +1,6 @@
 const { ApolloServer } = require('apollo-server')
 
-const schema = require('graphQlSchema.js');
+const schema = require('./graphQlSchema');
 
 const server = new ApolloServer({
     typeDefs: schema.typeDefs,
